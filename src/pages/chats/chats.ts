@@ -50,9 +50,9 @@ export class ChatsPage {
     this.requestservice.acceptrequest(item).then(() => {
       
       let newalert = this.alertCtrl.create({
-        title: 'Đồng Ý',
-        subTitle: 'Bây giờ 2 bạn có thể chat',
-        buttons: ['Chơi luôn']
+        title: 'Dong Y',
+        subTitle: 'Bay gio 2 ban co the chat',
+        buttons: ['OK']
       });
       newalert.present();
     })

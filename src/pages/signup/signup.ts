@@ -30,24 +30,24 @@ export class SignupPage {
       position: 'bottom'
     });
     if (this.newuser.email == '' || this.newuser.password == '') {
-      toaster.setMessage('Tài Khoản không hợp lệ');
+      toaster.setMessage('Tai khoan khong hop le');
       toaster.present();
     }
     else if (this.newuser.password.length < 5) {
-      toaster.setMessage('Mật khẩu phải nhiều hơn 5 ký tự');
+      toaster.setMessage('Mat khau phai nhieu hon 5 ky tu');
       toaster.present();
     }
     else {
       let loader = this.loadingCtrl.create({
-        content: 'Vui lòng chờ'
+        content: 'please wait'
       });
       loader.present();
       this.userservice.adduser(this.newuser).then((res: any) => {
         loader.dismiss();
         if (res.success){
           const alert = this.alertCtrl.create({
-            title: 'Đăng ký thành công',
-            subTitle: 'tài khoản của bạn đã được ghi trên hệ thống',
+            title: 'Đang ky thanh cong',
+            subTitle: 'tai khoan cua ban da duoc luu tren he thong',
             buttons: ['OK']
           });
           alert.present();
